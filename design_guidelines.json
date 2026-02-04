@@ -1,0 +1,157 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Læge Christa Ellefsen Blaasvær",
+      "tone": "Professional, Trustworthy, Calming, Warm, Inviting",
+      "aesthetic": "Organic Minimalist",
+      "theme_strategy": "light_only"
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Playfair Display, serif",
+        "body": "Lato, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight",
+        "h2": "text-3xl md:text-4xl font-medium tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed",
+        "small": "text-sm font-medium tracking-wide uppercase"
+      },
+      "imports": [
+        "@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');"
+      ]
+    },
+    "colors": {
+      "palette_name": "Nordic Healer",
+      "tailwind_config": {
+        "css_variables": {
+          "root": {
+            "--background": "40 20% 97%",
+            "--foreground": "145 30% 14%",
+            "--card": "0 0% 100%",
+            "--card-foreground": "145 30% 14%",
+            "--popover": "0 0% 100%",
+            "--popover-foreground": "145 30% 14%",
+            "--primary": "145 19% 36%",
+            "--primary-foreground": "0 0% 100%",
+            "--secondary": "38 18% 87%",
+            "--secondary-foreground": "145 30% 14%",
+            "--muted": "38 18% 87%",
+            "--muted-foreground": "145 10% 40%",
+            "--accent": "30 54% 64%",
+            "--accent-foreground": "0 0% 100%",
+            "--destructive": "0 84.2% 60.2%",
+            "--destructive-foreground": "0 0% 98%",
+            "--border": "38 10% 85%",
+            "--input": "38 10% 85%",
+            "--ring": "145 19% 36%",
+            "--radius": "0.75rem"
+          }
+        }
+      },
+      "usage": {
+        "background": "bg-background (Warm White)",
+        "text_main": "text-foreground (Deep Forest Green)",
+        "text_muted": "text-muted-foreground (Soft Green-Grey)",
+        "primary_action": "bg-primary text-primary-foreground (Sage Green)",
+        "secondary_surface": "bg-secondary (Sand/Beige)"
+      }
+    },
+    "layout": {
+      "spacing_system": "generous",
+      "container": "max-w-5xl mx-auto px-6 md:px-12",
+      "grid_strategy": "bento_soft",
+      "border_radius": "rounded-2xl",
+      "modes": {
+        "hero": "Centered text with soft background shapes, no photo",
+        "info_cards": "Grid of 2 or 3 columns, soft borders, generous padding (p-8)"
+      }
+    },
+    "components": {
+      "buttons": {
+        "style": "rounded-full px-8 py-6 text-lg font-medium transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
+        "primary": "bg-primary text-white hover:bg-primary/90",
+        "secondary": "bg-white border border-border text-foreground hover:bg-secondary"
+      },
+      "cards": {
+        "style": "bg-card border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8"
+      },
+      "navigation": {
+        "style": "sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40"
+      }
+    },
+    "visual_enhancers": {
+      "texture": "Subtle noise overlay (opacity 0.03) on background to add warmth",
+      "decorations": "Soft, organic blobs in CSS (absolute positioned, blurred) using secondary colors",
+      "icons": "Lucide React - Stroke width 1.5px (Thin/Elegant)"
+    },
+    "content_guidelines": {
+      "language": "da-DK",
+      "tone": "Empathetic, Professional, Clear",
+      "key_phrases": [
+        "Velkommen til klinikken",
+        "Tryghed og faglighed",
+        "Bestil tid",
+        "Akut hjælp"
+      ]
+    }
+  },
+  "implementation_plan": {
+    "phases": [
+      {
+        "name": "Setup",
+        "actions": [
+          "Update index.css with new HSL variables",
+          "Install Lucide React icons",
+          "Configure fonts in index.css"
+        ]
+      },
+      {
+        "name": "Components",
+        "actions": [
+          "Create 'Section' wrapper with generous padding",
+          "Create 'InfoCard' component",
+          "Create 'ReviewBadge' component (5.0 stars)"
+        ]
+      },
+      {
+        "name": "Pages",
+        "actions": [
+          "Build Hero Section (Typography focused)",
+          "Build 'Om Klinikken' (About) - Text + Icons",
+          "Build 'Kontakt' - Map + Phone + Address",
+          "Build 'Patientinformation' - Accordion or List"
+        ]
+      }
+    ],
+    "assets": {
+      "icons_needed": [
+        "Phone",
+        "MapPin",
+        "Clock",
+        "Star",
+        "Info",
+        "Calendar",
+        "ShieldCheck",
+        "Stethoscope"
+      ],
+      "images": []
+    }
+  },
+  "universal_guidelines": {
+    "do_not": [
+      "Do NOT use stock photos of doctors (client requested no images)",
+      "Do NOT use cold blue colors",
+      "Do NOT use sharp corners (use rounded-xl or 2xl)",
+      "Do NOT use 'Inter' for headings"
+    ],
+    "must_do": [
+      "MUST use Danish language for all text",
+      "MUST ensure high contrast for accessibility (older audience)",
+      "MUST prioritize mobile layout (stacking order)",
+      "MUST add data-testid to all interactive elements"
+    ]
+  }
+}
