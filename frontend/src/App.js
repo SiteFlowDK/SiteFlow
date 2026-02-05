@@ -496,8 +496,7 @@ const ReviewsSection = () => {
                   className="text-foreground italic leading-relaxed mb-4"
                   style={{ fontFamily: "Playfair Display, serif" }}
                 >
-                  "En fantastisk og omsorgsfuld læge, der virkelig lytter til
-                  sine patienter. Varmt kan anbefales!"
+                  "Altid lækker the på kanden, og der serveres chokolade og god underholdning :)"
                 </p>
                 <p className="text-sm text-muted-foreground">— Tilfreds patient</p>
               </div>
